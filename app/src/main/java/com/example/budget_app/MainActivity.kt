@@ -8,6 +8,7 @@ import com.microsoft.appcenter.crashes.Crashes
 import com.microsoft.appcenter.distribute.Distribute
 import android.widget.Button
 import android.widget.TextView
+import android.widget.EditText
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,10 +25,18 @@ class MainActivity : AppCompatActivity() {
         // Get the widgets
         val textView = findViewById<TextView>(R.id.textView)
         val button = findViewById<Button>(R.id.button)
+        val inputField = findViewById<EditText>(R.id.editText)
+        val enterButton = findViewById<Button>(R.id.button2)
 
         // Set a click listener for button widget
         button.setOnClickListener{
             textView.text = getString(R.string.text_clicked)
+        }
+
+        var input = ""
+        enterButton.setOnClickListener{
+            input = inputField.text.toString()
+            enterButton.text = input
         }
     }
 }
