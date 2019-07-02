@@ -9,6 +9,11 @@ import com.microsoft.appcenter.distribute.Distribute
 import android.widget.Button
 import android.widget.TextView
 import android.widget.EditText
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
+import com.crashlytics.android.answers.ContentViewEvent
+import com.crashlytics.android.answers.Answers
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +24,7 @@ class MainActivity : AppCompatActivity() {
             Analytics::class.java, Crashes::class.java, Distribute::class.java
         )
         super.onCreate(savedInstanceState)
+        Fabric.with(this, Crashlytics())
 
         setContentView(R.layout.content_main)
 
@@ -31,12 +37,25 @@ class MainActivity : AppCompatActivity() {
         // Set a click listener for button widget
         button.setOnClickListener{
             textView.text = getString(R.string.text_clicked)
+            Answers.getInstance().logContentView(
+                ContentViewEvent()
+                    .putContentName("Click")
+                    .putContentType("Button")
+                    .putContentId("0001")
+            )
         }
 
         var input = ""
         enterButton.setOnClickListener{
             input = inputField.text.toString()
             enterButton.text = input
+            Answers.getInstance().logContentView(
+                ContentViewEvent()
+                    .putContentName("Input")
+                    .putContentType("Text")
+                    .putContentId("0002")
+                    .putCustomAttribute("Input Text", input)
+            )
         }
     }
 }
