@@ -1,7 +1,6 @@
 package com.example.budget_app
 
 import android.os.Bundle
-import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -15,7 +14,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.view.ViewGroup
 import android.view.View
-import android.widget.RelativeLayout
+import com.crashlytics.android.answers.ContentViewEvent
+import com.crashlytics.android.answers.Answers
 
 
 
@@ -40,13 +40,27 @@ class MainActivity : AppCompatActivity() {
         ll = findViewById(R.id.linearLayout)
 
         button.setOnClickListener {
-            if(!creating)
+            if(!creating) {
+                Answers.getInstance().logContentView(
+                    ContentViewEvent()
+                        .putContentName("Add Category to List")
+                        .putContentType("Click")
+                        .putContentId("1001")
+                )
                 createButton()
+            }
         }
 
         button2.setOnClickListener {
-            if(!creating)
+            if(!creating) {
+                Answers.getInstance().logContentView(
+                    ContentViewEvent()
+                        .putContentName("Remove Category from List")
+                        .putContentType("Click")
+                        .putContentId("1002")
+                )
                 deleteLastButton()
+            }
         }
     }
 
@@ -71,6 +85,15 @@ class MainActivity : AppCompatActivity() {
 
         createButton.setOnClickListener {
             name = nameInput.text.toString()
+
+            Answers.getInstance().logContentView(
+                ContentViewEvent()
+                    .putContentName("Confirmed added Category")
+                    .putContentType("Click")
+                    .putContentId("1003")
+                    .putCustomAttribute("Category Name", name)
+            )
+
             newLayout.removeAllViews()
 
             val categoryText = TextView(this)
