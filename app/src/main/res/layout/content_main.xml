@@ -10,25 +10,10 @@
         tools:context=".MainActivity">
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/scrollView" tools:layout_editor_absoluteY="-16dp"
-            tools:layout_editor_absoluteX="-47dp">
+            android:layout_height="match_parent" android:id="@+id/scrollView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical" android:id="@+id/linearLayout">
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <TextView
-                        android:text="Example Category"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_weight="1"/>
-                <TextView
-                        android:text="$0.00"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"
-                        android:textAlignment="viewEnd"/>
-            </LinearLayout>
-        </LinearLayout>
+                      android:orientation="vertical" android:id="@+id/linearLayout"/>
     </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"

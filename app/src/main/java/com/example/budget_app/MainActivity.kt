@@ -1,6 +1,7 @@
 package com.example.budget_app
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -10,12 +11,18 @@ import com.crashlytics.android.Crashlytics
 import io.fabric.sdk.android.Fabric
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Button
+import android.widget.EditText
 import android.view.ViewGroup
 import android.view.View
+import android.widget.RelativeLayout
+
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var ll: LinearLayout
+    private var creating = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCenter.start(
@@ -33,31 +40,52 @@ class MainActivity : AppCompatActivity() {
         ll = findViewById(R.id.linearLayout)
 
         button.setOnClickListener {
-            createButton("New Category", "$60.00")
+            if(!creating)
+                createButton()
         }
 
         button2.setOnClickListener {
-            deleteLastButton()
+            if(!creating)
+                deleteLastButton()
         }
     }
 
-    private fun createButton(categoryName: String, price: String) {
+    private fun createButton() {
+        creating = true
+
         val newLayout = LinearLayout(this)
-        val categoryText = TextView(this)
-        val priceText = TextView(this)
+        val nameInput = EditText(this)
+        val createButton = Button(this)
+
+        var name: String
 
         ll.addView(newLayout)
-        newLayout.addView(categoryText)
-        newLayout.addView(priceText)
 
         newLayout.orientation = LinearLayout.HORIZONTAL
-        newLayout.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        categoryText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        priceText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-        priceText.textAlignment = View.TEXT_ALIGNMENT_TEXT_END
+        newLayout.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
 
-        categoryText.text = categoryName
-        priceText.text = price
+        newLayout.addView(nameInput)
+        newLayout.addView(createButton)
+
+        createButton.text = "Create"
+
+        createButton.setOnClickListener {
+            name = nameInput.text.toString()
+            newLayout.removeAllViews()
+
+            val categoryText = TextView(this)
+            val priceText = TextView(this)
+
+            newLayout.addView(categoryText)
+            newLayout.addView(priceText)
+
+            categoryText.text = name
+            categoryText.textSize = 20f
+            priceText.text = "$0.00"
+            priceText.textSize = 20f
+
+            creating = false
+        }
     }
 
     private fun deleteLastButton() {
