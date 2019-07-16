@@ -12,12 +12,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Button
 import android.widget.EditText
-import android.view.ViewGroup
 import android.view.View
 import com.crashlytics.android.answers.ContentViewEvent
 import com.crashlytics.android.answers.Answers
-
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -69,21 +66,25 @@ class MainActivity : AppCompatActivity() {
 
         val newLayout = LinearLayout(this)
         val nameInput = EditText(this)
-        val createButton = Button(this)
+        val button = Button(this)
 
         var name: String
 
         ll.addView(newLayout)
 
         newLayout.orientation = LinearLayout.HORIZONTAL
-        newLayout.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        newLayout.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
+
+        nameInput.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        (nameInput.layoutParams as LinearLayout.LayoutParams).weight = 1f
+        button.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
         newLayout.addView(nameInput)
-        newLayout.addView(createButton)
+        newLayout.addView(button)
 
-        createButton.text = "Create"
+        button.text = "Create"
 
-        createButton.setOnClickListener {
+        button.setOnClickListener {
             name = nameInput.text.toString()
 
             Answers.getInstance().logContentView(
@@ -101,6 +102,10 @@ class MainActivity : AppCompatActivity() {
 
             newLayout.addView(categoryText)
             newLayout.addView(priceText)
+
+            categoryText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            (categoryText.layoutParams as LinearLayout.LayoutParams).weight = 1f
+            priceText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
 
             categoryText.text = name
             categoryText.textSize = 20f
