@@ -22,20 +22,19 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var ll: LinearLayout
     private var creating = false
-    private lateinit var textMessage: TextView
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                textMessage.setText(R.string.title_budget)
+                setTitle("Budget")
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_accounts)
+                setTitle(R.string.title_accounts)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_transaction)
+                setTitle(R.string.title_transaction)
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -52,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        textMessage = findViewById(R.id.message)
         nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         val button = findViewById<View>(R.id.floatingActionButton)
