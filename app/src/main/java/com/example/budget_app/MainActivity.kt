@@ -15,11 +15,32 @@ import android.widget.EditText
 import android.view.View
 import com.crashlytics.android.answers.ContentViewEvent
 import com.crashlytics.android.answers.Answers
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var ll: LinearLayout
     private var creating = false
+    private lateinit var textMessage: TextView
+
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.navigation_home -> {
+                textMessage.setText(R.string.title_budget)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_dashboard -> {
+                textMessage.setText(R.string.title_accounts)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_notifications -> {
+                textMessage.setText(R.string.title_transaction)
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCenter.start(
@@ -29,7 +50,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Fabric.with(this, Crashlytics())
 
-        setContentView(R.layout.content_main)
+        setContentView(R.layout.activity_main)
+
+        textMessage = findViewById(R.id.message)
+        nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         val button = findViewById<View>(R.id.floatingActionButton)
         val button2 = findViewById<View>(R.id.floatingActionButton2)
