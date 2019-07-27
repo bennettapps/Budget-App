@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
                     deleteLastButton()
                 }
             }
-
         }
         return super.onOptionsItemSelected(item)
     }
