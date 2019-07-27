@@ -1,6 +1,9 @@
 package com.example.budget_app
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -12,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.widget.Toolbar
 import android.view.View
 import com.crashlytics.android.answers.ContentViewEvent
 import com.crashlytics.android.answers.Answers
@@ -26,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                setTitle("Budget")
+                setTitle(R.string.title_budget)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
@@ -53,34 +57,40 @@ class MainActivity : AppCompatActivity() {
 
         nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        val button = findViewById<View>(R.id.floatingActionButton)
-        val button2 = findViewById<View>(R.id.floatingActionButton2)
+        val toolbar = findViewById<Toolbar>(R.id.app_bar)
 
         ll = findViewById(R.id.linearLayout)
 
-        button.setOnClickListener {
-            if(!creating) {
-                Answers.getInstance().logContentView(
-                    ContentViewEvent()
-                        .putContentName("Add Category to List")
-                        .putContentType("Click")
-                        .putContentId("1001")
-                )
-                createButton()
-            }
+        setSupportActionBar(toolbar)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = getMenuInflater()
+        inflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (!creating) {
+            Answers.getInstance().logContentView(
+                ContentViewEvent()
+                    .putContentName("Add Category to List")
+                    .putContentType("Click")
+                    .putContentId("1001")
+            )
+            createButton()
         }
 
-        button2.setOnClickListener {
-            if(!creating) {
-                Answers.getInstance().logContentView(
-                    ContentViewEvent()
-                        .putContentName("Remove Category from List")
-                        .putContentType("Click")
-                        .putContentId("1002")
-                )
-                deleteLastButton()
-            }
-        }
+//        if (!creating) {
+//            Answers.getInstance().logContentView(
+//                ContentViewEvent()
+//                    .putContentName("Remove Category from List")
+//                    .putContentType("Click")
+//                    .putContentId("1002")
+//            )
+//            deleteLastButton()
+//        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun createButton() {
