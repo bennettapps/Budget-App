@@ -72,24 +72,28 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (!creating) {
-            Answers.getInstance().logContentView(
-                ContentViewEvent()
-                    .putContentName("Add Category to List")
-                    .putContentType("Click")
-                    .putContentId("1001")
-            )
-            createButton()
-        }
+            when (item.getItemId()) {
+                R.id.add -> {
+                    Answers.getInstance().logContentView(
+                        ContentViewEvent()
+                            .putContentName("Add Category to List")
+                            .putContentType("Click")
+                            .putContentId("1001")
+                    )
+                    createButton()
+                }
+                R.id.edit -> {
+                    Answers.getInstance().logContentView(
+                        ContentViewEvent()
+                            .putContentName("Remove Category from List")
+                            .putContentType("Click")
+                            .putContentId("1002")
+                    )
+                    deleteLastButton()
+                }
+            }
 
-//        if (!creating) {
-//            Answers.getInstance().logContentView(
-//                ContentViewEvent()
-//                    .putContentName("Remove Category from List")
-//                    .putContentType("Click")
-//                    .putContentId("1002")
-//            )
-//            deleteLastButton()
-//        }
+        }
         return super.onOptionsItemSelected(item)
     }
 
