@@ -16,15 +16,16 @@ import android.widget.TextView
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.widget.Toolbar
-import android.view.View
 import com.crashlytics.android.answers.ContentViewEvent
 import com.crashlytics.android.answers.Answers
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.tabian.saveanddisplaysql.DatabaseHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var ll: LinearLayout
+    private lateinit var nDatabaseHelper: DatabaseHelper
     private var creating = false
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -46,22 +47,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCenter.start(
+        AppCenter.start( // start AppCenter
             application, "019a5c56-13b5-4917-ae15-6e2155ac1873",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
         )
-        super.onCreate(savedInstanceState)
-        Fabric.with(this, Crashlytics())
+        super.onCreate(savedInstanceState) // start app
+        Fabric.with(this, Crashlytics()) // start fabric.io
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // set content view
+
+        nDatabaseHelper = DatabaseHelper(this) // initialize database
 
         nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         val toolbar = findViewById<Toolbar>(R.id.app_bar)
-
-        ll = findViewById(R.id.linearLayout)
-
         setSupportActionBar(toolbar)
+
+        val newLayout = LinearLayout(this)
+        ll = findViewById(R.id.linearLayout)
+        ll.addView(newLayout)
+
+        newLayout.orientation = LinearLayout.HORIZONTAL
+        newLayout.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
+
+        createCategory(newLayout, "To Be Budgeted", 100.00f)
+//        nDatabaseHelper.addData("")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -130,29 +140,43 @@ class MainActivity : AppCompatActivity() {
                     .putCustomAttribute("Category Name", name)
             )
 
-            newLayout.removeAllViews()
-
-            val categoryText = TextView(this)
-            val priceText = TextView(this)
-
-            newLayout.addView(categoryText)
-            newLayout.addView(priceText)
-
-            categoryText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            (categoryText.layoutParams as LinearLayout.LayoutParams).weight = 1f
-            priceText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-
-            categoryText.text = name
-            categoryText.textSize = 20f
-            priceText.text = "$0.00"
-            priceText.textSize = 20f
-
-            creating = false
+            createCategory(newLayout, name, 0.00f)
         }
     }
 
+    private fun createCategory(newLayout: LinearLayout, name: String, amount: Float) {
+        newLayout.removeAllViews()
+
+        val categoryText = TextView(this)
+        val priceText = TextView(this)
+
+        newLayout.addView(categoryText)
+        newLayout.addView(priceText)
+
+        categoryText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        (categoryText.layoutParams as LinearLayout.LayoutParams).weight = 1f
+        priceText.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+
+        categoryText.text = name
+        categoryText.textSize = 20f
+        priceText.text = "$$amount"
+        priceText.textSize = 20f
+
+        creating = false
+
+        priceText.setOnClickListener {
+            moveMoney()
+        }
+    }
+
+    private fun moveMoney() {
+        println("moving money!")
+//        move from the first one
+//        currentAmount: Int = ll.findViewWithTag<LinearLayout>(0).findViewWithTag<TextView>(1).text
+    }
+
     private fun deleteLastButton() {
-        if(ll.childCount > 0) {
+        if(ll.childCount > 1) { // can't delete the final category "to be budgeted"
             ll.removeViewAt(ll.childCount - 1)
         }
     }
