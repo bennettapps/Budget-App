@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">Budget-App</string>
-    <string name="title_budget">Budget</string>
-    <string name="title_accounts">Accounts</string>
-    <string name="title_transaction">Transaction</string>
-    <string name="add_name">Add</string>
 </resources>
