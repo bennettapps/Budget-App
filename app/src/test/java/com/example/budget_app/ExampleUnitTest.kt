@@ -1,17 +1,17 @@
 package com.example.budget_app
 
+import android.os.Build
 import org.junit.Test
-
+import org.junit.runner.RunWith
 import org.junit.Assert.*
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [Build.VERSION_CODES.O_MR1])
+class SimpleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun simpleTest() {
+        assertEquals(true, true)
     }
 }
