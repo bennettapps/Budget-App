@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/homeButton"
+            android:icon="@drawable/ic_home_button"
+            android:title="@string/home_title"
+            android:visible="true" />
+    <item
+            android:id="@+id/accountButton"
+            android:icon="@drawable/ic_account_button"
+            android:title="@string/account_title"
+            android:visible="true" />
+    <item
+            android:id="@+id/transactionButton"
+            android:icon="@drawable/ic_transaction_button"
+            android:title="@string/transaction_title"
+            android:visible="true" />
+</menu>

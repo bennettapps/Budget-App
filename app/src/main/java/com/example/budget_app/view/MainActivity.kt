@@ -1,6 +1,8 @@
 package com.example.budget_app.view
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
                 .putContentId("0")
                 .putCustomAttribute("Started Successfully", "true")
         )
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.top_menu, menu)
+        return true
     }
 }

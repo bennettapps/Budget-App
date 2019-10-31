@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Budget-App</string>
+    <string name="home_title">Home</string>
+    <string name="account_title">Accounts</string>
+    <string name="transaction_title">Transactions</string>
+    <string name="to_be_budgeted">TO BE \nBUDGETED</string>
 </resources>
