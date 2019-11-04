@@ -4,4 +4,6 @@
     <string name="account_title">Accounts</string>
     <string name="transaction_title">Transactions</string>
     <string name="to_be_budgeted">TO BE \nBUDGETED</string>
+    <string name="save_category_button">Save Category</string>
+    <string name="enter_name">Enter Name...</string>
 </resources>

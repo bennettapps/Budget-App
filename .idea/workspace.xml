@@ -10,33 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa2d000e-ea1c-4db0-8f5f-eece3e788440" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_account_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_home_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_transaction_button.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_account_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_home_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_transaction_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_account_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_home_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_transaction_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_account_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_home_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_transaction_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_account_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_home_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_transaction_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/DatabaseTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityUITest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,39 +60,67 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="377">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="315">
               <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityUITest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="29" column="66" lean-forward="true" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding>
-                <element signature="e#1082#1106#0" expanded="true" />
+                <element signature="e#32#395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/DatabaseTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="90">
+              <caret line="10" column="6" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <element signature="e#32#195#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,8 +155,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="resourceFile" />
+        <option value="Kotlin File" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -160,12 +184,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/View/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap/ic_launcher.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap/ic_launcher_round.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/ExampleUnitTest.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TopBarTest.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/home_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_home_button.xml" />
@@ -174,24 +196,31 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_account_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_home_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/DatabaseTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AddCategory.kt" />
+        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AddCategoryUITest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_category.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="811" />
+    <option name="height" value="808" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -199,57 +228,12 @@
               <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="mipmap" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res (generated)" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res (generated)" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,6 +299,9 @@
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.example.budget_app.View" />
     </key>
+    <key name="android.template.packageName">
+      <recent name="com.example.budget_app.view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/mipmap/ic_launcher" />
@@ -333,7 +320,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android JUnit.MainActivityFlowTest">
+    <configuration name="AddCategoryUITest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.budget_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.budget_app" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.AddCategoryUITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivityFlowTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.budget_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.budget_app" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.MainActivityFlowTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainActivityFlowTest.addButtonClicks" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.budget_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.budget_app" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.MainActivityFlowTest" />
+      <option name="METHOD_NAME" value="addButtonClicks" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainActivityTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
@@ -350,7 +386,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleUnitTest (1)" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainActivityTest.addButtonNotNull" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
@@ -359,40 +395,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.SimpleUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleUnitTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coderefer.androidtestingexamples.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.coderefer.androidtestingexamples.SimpleUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleUnitTest.buttonText (1)" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.budget_app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.SimpleUnitTest" />
-      <option name="METHOD_NAME" value="buttonText" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.MainActivityTest" />
+      <option name="METHOD_NAME" value="addButtonNotNull" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -459,30 +463,13 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Budget-App" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.MainActivityFlowTest" />
+        <item itemvalue="Android JUnit.MainActivityFlowTest.addButtonClicks" />
+        <item itemvalue="Android JUnit.MainActivityTest.addButtonNotNull" />
+        <item itemvalue="Android JUnit.AddCategoryUITest" />
         <item itemvalue="Android JUnit.MainActivityTest" />
-        <item itemvalue="Android JUnit.SimpleUnitTest (1)" />
-        <item itemvalue="Android JUnit.SimpleUnitTest" />
-        <item itemvalue="Gradle.Budget-App" />
-        <item itemvalue="Android JUnit.SimpleUnitTest.buttonText (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -511,43 +498,50 @@
       <option name="project" value="LOCAL" />
       <updated>1571965872914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Build UI for the main screen using TDD.">
+      <created>1572484180143</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572484180143</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimpleUnitTest_(1) - 2019.10.25 at 16h 27m 11s.xml">
-      <configuration name="SimpleUnitTest (1)" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 12h 48m 25s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="SimpleUnitTest_(1) - 2019.10.25 at 16h 31m 12s.xml">
-      <configuration name="SimpleUnitTest (1)" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 12h 55m 36s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="SimpleUnitTest_(1) - 2019.10.25 at 16h 34m 14s.xml">
-      <configuration name="SimpleUnitTest (1)" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 13h 04m 00s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.25 at 19h 24m 07s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 13h 05m 37s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.27 at 13h 59m 44s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest - 2019.11.04 at 13h 10m 37s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.27 at 14h 03m 09s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityTest_addButtonNotNull - 2019.11.04 at 13h 14m 32s.xml">
+      <configuration name="MainActivityTest.addButtonNotNull" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.27 at 14h 05m 27s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest - 2019.11.04 at 13h 16m 01s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.28 at 13h 29m 33s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 13h 20m 14s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.28 at 13h 39m 59s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest - 2019.11.04 at 13h 21m 01s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MainActivityTest - 2019.10.28 at 16h 39m 45s.xml">
-      <configuration name="MainActivityTest" configurationId="AndroidJUnit" />
+    <history-entry file="MainActivityFlowTest_addButtonClicks - 2019.11.04 at 13h 21m 59s.xml">
+      <configuration name="MainActivityFlowTest.addButtonClicks" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="811" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -559,15 +553,15 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.32684284" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.32650602" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.24200279" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.24096386" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -582,10 +576,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Purge project now that I better understand Android Studio." />
     <MESSAGE value="Create first unit test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create first unit test." />
+    <MESSAGE value="Build UI for the main screen using TDD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Build UI for the main screen using TDD." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/Budget.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/Accounts.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_accounts.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" />
@@ -663,14 +657,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TopBarTest.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -700,10 +686,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_transaction_button.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_transaction_button.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -725,20 +707,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" selection-start-line="4" selection-start-column="3" selection-end-line="9" selection-end-column="40" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AddCategory.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AddCategoryUITest.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_category.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/DatabaseTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="90">
+          <caret line="10" column="6" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#32#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -747,28 +738,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="40" selection-start-line="4" selection-start-column="3" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityUITest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="185">
+          <caret line="29" column="66" lean-forward="true" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="315">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="e#1082#1106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="377">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="63" lean-forward="true" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+          <folding>
+            <element signature="e#32#395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
