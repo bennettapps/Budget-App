@@ -54,5 +54,9 @@ class MainActivity : AppCompatActivity() {
         val view = layoutInflater.inflate(R.layout.category_popup, null)
         val dialogue = AlertDialog.Builder(this).setView(view).create()
         dialogue.show()
+
+        dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener{
+            dialogue.dismiss()
+        }
     }
 }
