@@ -2,8 +2,10 @@ package com.example.budget_app
 
 import android.app.Activity
 import android.os.Build
-import android.widget.Button
+import com.example.budget_app.model.CategoryDB
+import com.example.budget_app.presenter.DatabaseHandler
 import com.example.budget_app.view.MainActivity
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.category_popup.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -39,5 +41,29 @@ class MainActivityFlowTest {
         shadowDialog.categorySave.performClick()
 
         assertFalse(shadowDialog.isShowing)
+    }
+
+    @Test
+    fun saveAddsToDatabase() {
+        val db = DatabaseHandler(MainActivity(), CategoryDB())
+        val initialCount = db.getCount()
+        shadow.clickMenuItem(R.id.add_menu_button)
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categorySave.performClick()
+
+        assert(db.getCount() == initialCount + 1)
+    }
+
+    @Test
+    fun saveAddsToRecyclerView() {
+        val recyclerViewChildren = shadow.contentView.categoryRecyclerView.childCount
+        shadow.clickMenuItem(R.id.add_menu_button)
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categorySave.performClick()
+
+        val newChildCount = shadow.contentView.categoryRecyclerView.childCount
+        assert(newChildCount == recyclerViewChildren + 1)
     }
 }

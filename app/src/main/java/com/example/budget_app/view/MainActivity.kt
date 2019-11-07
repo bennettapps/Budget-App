@@ -15,8 +15,12 @@ import io.fabric.sdk.android.Fabric
 import com.crashlytics.android.answers.ContentViewEvent
 import com.crashlytics.android.answers.Answers
 import com.example.budget_app.R
+import com.example.budget_app.model.CategoryDB
+import com.example.budget_app.presenter.DatabaseHandler
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var db: DatabaseHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCenter.start( // start AppCenter
@@ -34,6 +38,14 @@ class MainActivity : AppCompatActivity() {
                 .putContentId("0")
                 .putCustomAttribute("Started Successfully", "true")
         )
+
+        db = DatabaseHandler(this, CategoryDB())
+
+        val choreList = db.readAll()
+        choreList.reverse()
+
+        val adapter = CategoryAdapter(choreList, this)
+        adapter.notifyDataSetChanged()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -56,7 +68,9 @@ class MainActivity : AppCompatActivity() {
         dialogue.show()
 
         dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener{
+            db.create(listOf("Name", 100))
             dialogue.dismiss()
+            finish()
         }
     }
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <Button
+                    android:id="@+id/editCategoryButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@id/moveCategoryButton"
+                    android:padding="8dp"
+                    android:background="@android:drawable/ic_menu_edit" />
+
+            <Button
+                    android:id="@+id/moveCategoryButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/deleteCategoryButton"
+                    android:padding="8dp"
+                    android:background="@drawable/ic_transaction_button" />
+
+            <Button
+                    android:id="@+id/deleteCategoryButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:background="@android:drawable/ic_menu_delete" />
+
+            <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Rent"
+                    android:padding="8dp"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:id="@+id/categoryAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="$1,500.00"
+                    android:padding="8dp"
+                    android:textSize="18sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
