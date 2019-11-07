@@ -1,9 +1,12 @@
 package com.example.budget_app.view
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +22,7 @@ import com.example.budget_app.R
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.category_popup.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -75,14 +79,20 @@ class MainActivity : AppCompatActivity() {
         val dialogue = AlertDialog.Builder(this).setView(view).create()
         dialogue.show()
 
-        dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener{
-            db.create(listOf("Another", 1))
-            dialogue.dismiss()
-            choreList = db.readAll()
-            choreList.reverse()
-            adapter = CategoryAdapter(choreList, this)
-            categoryRecyclerView.adapter = adapter
-            adapter.notifyDataSetChanged()
+        dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener {
+            val input = view.categoryAddName.text.toString()
+
+            if (!TextUtils.isEmpty(input)) {
+                db.create(listOf(input, 0))
+                dialogue.dismiss()
+                choreList = db.readAll()
+                choreList.reverse()
+                adapter = CategoryAdapter(choreList, this)
+                categoryRecyclerView.adapter = adapter
+                adapter.notifyDataSetChanged()
+            } else {
+                Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

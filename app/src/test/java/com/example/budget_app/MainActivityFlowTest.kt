@@ -38,6 +38,7 @@ class MainActivityFlowTest {
         shadow.clickMenuItem(R.id.add_menu_button)
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categoryAddName.setText("Test")
         shadowDialog.categorySave.performClick()
 
         assertFalse(shadowDialog.isShowing)
@@ -50,6 +51,7 @@ class MainActivityFlowTest {
         shadow.clickMenuItem(R.id.add_menu_button)
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categoryAddName.setText("Test")
         shadowDialog.categorySave.performClick()
 
         assert(db.getCount() == initialCount + 1)
@@ -61,9 +63,25 @@ class MainActivityFlowTest {
         shadow.clickMenuItem(R.id.add_menu_button)
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categoryAddName.setText("Test")
         shadowDialog.categorySave.performClick()
 
         val newChildCount = shadow.contentView.categoryRecyclerView.childCount
         assert(newChildCount == recyclerViewChildren + 1)
+    }
+
+    @Test
+    fun titleIsSameInDB() {
+        val recyclerViewCount = shadow.contentView.categoryRecyclerView.childCount
+        val db = DatabaseHandler(activity, CategoryDB())
+
+        shadow.clickMenuItem(R.id.add_menu_button)
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+
+        shadowDialog.categoryAddName.setText("Test")
+        shadowDialog.categorySave.performClick()
+
+        assert(db.readAll()[recyclerViewCount][0] == "Test")
     }
 }
