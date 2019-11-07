@@ -1,6 +1,7 @@
 package com.example.budget_app
 
 import android.app.Activity
+import android.app.Dialog
 import android.os.Build
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
@@ -22,6 +23,16 @@ class MainActivityFlowTest {
     private var activity: Activity = Robolectric.setupActivity(MainActivity::class.java)
     private val shadow = shadowOf(activity)
 
+    private fun clickThroughPopup(): Dialog {
+        shadow.clickMenuItem(R.id.add_menu_button)
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categoryAddName.setText("Test")
+        shadowDialog.categorySave.performClick()
+
+        return shadowDialog
+    }
+
     @Test
     fun nothingGivesNoPopups() {
         assert(ShadowAlertDialog.getShownDialogs().isEmpty())
@@ -35,24 +46,16 @@ class MainActivityFlowTest {
 
     @Test
     fun saveRemovesPopup() {
-        shadow.clickMenuItem(R.id.add_menu_button)
-
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
-        shadowDialog.categoryAddName.setText("Test")
-        shadowDialog.categorySave.performClick()
-
-        assertFalse(shadowDialog.isShowing)
+        val popup = clickThroughPopup()
+        assertFalse(popup.isShowing)
     }
 
     @Test
     fun saveAddsToDatabase() {
         val db = DatabaseHandler(activity, CategoryDB())
         val initialCount = db.getCount()
-        shadow.clickMenuItem(R.id.add_menu_button)
 
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
-        shadowDialog.categoryAddName.setText("Test")
-        shadowDialog.categorySave.performClick()
+        clickThroughPopup()
 
         assert(db.getCount() == initialCount + 1)
     }
@@ -60,11 +63,8 @@ class MainActivityFlowTest {
     @Test
     fun saveAddsToRecyclerView() {
         val recyclerViewChildren = shadow.contentView.categoryRecyclerView.childCount
-        shadow.clickMenuItem(R.id.add_menu_button)
 
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
-        shadowDialog.categoryAddName.setText("Test")
-        shadowDialog.categorySave.performClick()
+        clickThroughPopup()
 
         val newChildCount = shadow.contentView.categoryRecyclerView.childCount
         assert(newChildCount == recyclerViewChildren + 1)
@@ -75,12 +75,7 @@ class MainActivityFlowTest {
         val recyclerViewCount = shadow.contentView.categoryRecyclerView.childCount
         val db = DatabaseHandler(activity, CategoryDB())
 
-        shadow.clickMenuItem(R.id.add_menu_button)
-
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
-
-        shadowDialog.categoryAddName.setText("Test")
-        shadowDialog.categorySave.performClick()
+        clickThroughPopup()
 
         assert(db.readAll()[recyclerViewCount][0] == "Test")
     }
