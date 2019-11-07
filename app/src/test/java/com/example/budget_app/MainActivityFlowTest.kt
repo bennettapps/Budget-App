@@ -45,7 +45,7 @@ class MainActivityFlowTest {
 
     @Test
     fun saveAddsToDatabase() {
-        val db = DatabaseHandler(MainActivity(), CategoryDB())
+        val db = DatabaseHandler(activity, CategoryDB())
         val initialCount = db.getCount()
         shadow.clickMenuItem(R.id.add_menu_button)
 

@@ -51,27 +51,6 @@ class DatabaseHandler (context: Context, database: Database) :
         db.close()
     }
 
-    fun read(id: Int): List<Any> {
-        val db = writableDatabase
-        val cursor = db.query(tableName, itemKeys.toTypedArray(),
-            "$keyId =?", arrayOf(id.toString()), null, null, null, null)
-        cursor?.moveToFirst()
-
-        val result = mutableListOf(Any())
-        for(i in itemTypes.indices) {
-            when (itemTypes[i]) {
-                "TEXT" -> {
-                    result.add(cursor.getString(cursor.getColumnIndex(itemKeys[i])))
-                }
-                "INT" -> {
-                    result.add(cursor.getInt(cursor.getColumnIndex(itemKeys[i])))
-                }
-            }
-        }
-
-        return result
-    }
-
     fun readAll(): ArrayList<List<Any>> {
         val db = readableDatabase
         val list: ArrayList<List<Any>> = ArrayList()
@@ -80,10 +59,22 @@ class DatabaseHandler (context: Context, database: Database) :
 
         if(cursor.moveToFirst()) {
             do {
-                list.add(read(cursor.position))
+                val result = mutableListOf<Any>()
+                for(i in itemTypes.indices) {
+                    when (itemTypes[i]) {
+                        "TEXT" -> {
+                            result.add(cursor.getString(cursor.getColumnIndex(itemKeys[i])))
+                        }
+                        "INT" -> {
+                            result.add(cursor.getInt(cursor.getColumnIndex(itemKeys[i])))
+                        }
+                    }
+                }
+                list.add(result)
             } while (cursor.moveToNext())
         }
 
+        db.close()
         return list
     }
 

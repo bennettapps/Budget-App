@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
@@ -17,10 +18,13 @@ import com.crashlytics.android.answers.Answers
 import com.example.budget_app.R
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var db: DatabaseHandler
+    private lateinit var choreList: ArrayList<List<Any>>
+    private lateinit var adapter: CategoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCenter.start( // start AppCenter
@@ -41,10 +45,14 @@ class MainActivity : AppCompatActivity() {
 
         db = DatabaseHandler(this, CategoryDB())
 
-        val choreList = db.readAll()
+        choreList = db.readAll()
         choreList.reverse()
 
-        val adapter = CategoryAdapter(choreList, this)
+        adapter = CategoryAdapter(choreList, this)
+
+        categoryRecyclerView.layoutManager = LinearLayoutManager(this)
+        categoryRecyclerView.adapter = adapter
+
         adapter.notifyDataSetChanged()
     }
 
@@ -68,9 +76,13 @@ class MainActivity : AppCompatActivity() {
         dialogue.show()
 
         dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener{
-            db.create(listOf("Name", 100))
+            db.create(listOf("Another", 1))
             dialogue.dismiss()
-            finish()
+            choreList = db.readAll()
+            choreList.reverse()
+            adapter = CategoryAdapter(choreList, this)
+            categoryRecyclerView.adapter = adapter
+            adapter.notifyDataSetChanged()
         }
     }
 }
