@@ -90,9 +90,27 @@ class MainActivityFlowTest {
 
         val count = db.getCount()
 
-        val deleteView = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 1)
-        deleteView.findViewById<Button>(R.id.deleteCategoryButton).callOnClick()
+        val view = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 1)
+        view.findViewById<Button>(R.id.deleteCategoryButton).callOnClick()
 
         assert(db.getCount() == count - 1)
+    }
+
+    @Test
+    fun editButtonWorks() {
+        val db = DatabaseHandler(activity, CategoryDB())
+
+        clickThroughPopup("Edit")
+
+        val view = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 1)
+        view.findViewById<Button>(R.id.editCategoryButton).callOnClick()
+
+        shadow.clickMenuItem(R.id.add_menu_button)
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.categoryAddName.setText("New")
+        shadowDialog.categorySave.performClick()
+
+        assert(db.readAll()[db.getCount() - 1][0] == "New")
     }
 }
