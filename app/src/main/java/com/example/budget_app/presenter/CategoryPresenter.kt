@@ -17,7 +17,7 @@ import io.fabric.sdk.android.Fabric
 
 class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
 
-    private lateinit var db: DatabaseHandler
+    private var db = DatabaseHandler(context, CategoryDB())
 
     fun startUp(application: Application) {
         AppCenter.start( // start AppCenter
@@ -33,8 +33,6 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
                 .putContentId("0")
                 .putCustomAttribute("Started Successfully", "true")
         )
-
-        db = DatabaseHandler(context, CategoryDB())
     }
 
     fun updateAdapter() {

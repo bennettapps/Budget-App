@@ -61,6 +61,10 @@ class DatabaseHandler (context: Context, database: Database) :
             do {
                 val result = mutableListOf<Any>()
                 for(i in itemTypes.indices) {
+                    if(itemKeys[i] == "id") {
+                        result.add(cursor.getInt(cursor.getColumnIndex(keyId)))
+                        break
+                    }
                     when (itemTypes[i]) {
                         "TEXT" -> {
                             result.add(cursor.getString(cursor.getColumnIndex(itemKeys[i])))
