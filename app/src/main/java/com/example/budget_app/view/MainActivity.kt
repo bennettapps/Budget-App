@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         db = DatabaseHandler(this, CategoryDB())
 
         categoryPresenter = CategoryPresenter(this, categoryRecyclerView)
-        categoryPresenter.startUp(application)
+        categoryPresenter.startUp(application, findViewById(R.id.toBeAmount))
 
         categoryPresenter.updateAdapter()
     }

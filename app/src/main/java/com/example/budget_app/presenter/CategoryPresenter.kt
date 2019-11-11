@@ -4,7 +4,9 @@ import android.app.Application
 import android.content.Context
 import android.text.TextUtils
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,7 +28,7 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
 
     private var db = DatabaseHandler(context, CategoryDB())
 
-    fun startUp(application: Application) {
+    fun startUp(application: Application, toBeBudgeted: View) {
         AppCenter.start( // start AppCenter
             application, "019a5c56-13b5-4917-ae15-6e2155ac1873",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
@@ -44,6 +46,8 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         if(db.getCount() == 0) {
             db.create(listOf("To Be Budgeted", 0))
         }
+
+        toBeBudgeted.findViewById<TextView>(R.id.toBeAmount).text = "$${db.readAll()[0][1]}.00"
     }
 
     fun updateAdapter() {

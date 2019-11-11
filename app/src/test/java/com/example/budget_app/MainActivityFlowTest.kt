@@ -121,4 +121,12 @@ class MainActivityFlowTest {
 
         assert(db.readAll()[0][0] == "To Be Budgeted")
     }
+
+    @Test
+    fun toBeBudgetedAmountTrue() {
+        val db = DatabaseHandler(activity, CategoryDB())
+        val toBeAmount = shadow.contentView.toBeAmount
+
+        assert("$${db.readAll()[0][1]}.00" == toBeAmount.text)
+    }
 }
