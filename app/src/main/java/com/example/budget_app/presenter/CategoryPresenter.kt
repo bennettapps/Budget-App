@@ -40,10 +40,15 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
                 .putContentId("0")
                 .putCustomAttribute("Started Successfully", "true")
         )
+
+        if(db.getCount() == 0) {
+            db.create(listOf("To Be Budgeted", 0))
+        }
     }
 
     fun updateAdapter() {
         val list = db.readAll()
+        list.removeAt(0)
         list.reverse()
 
         val adapter = CategoryAdapter(list, context)
@@ -55,7 +60,6 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
     fun deleteCategory(id: Int) {
         db.delete(id)
         updateAdapter()
-
     }
 
     fun editCategory(id: Int) {

@@ -18,6 +18,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowAlertDialog
+import java.util.ArrayList
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [Build.VERSION_CODES.O_MR1])
@@ -79,7 +80,7 @@ class MainActivityFlowTest {
 
         clickThroughPopup("Test")
 
-        assert(db.readAll()[recyclerViewCount][0] == "Test")
+        assert(db.readAll()[recyclerViewCount + 1][0] == "Test")
     }
 
     @Test
@@ -90,7 +91,7 @@ class MainActivityFlowTest {
 
         val count = db.getCount()
 
-        val view = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 1)
+        val view = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 2)
         view.findViewById<Button>(R.id.deleteCategoryButton).callOnClick()
 
         assert(db.getCount() == count - 1)
@@ -102,7 +103,7 @@ class MainActivityFlowTest {
 
         clickThroughPopup("Edit")
 
-        val view = shadow.contentView.categoryRecyclerView.getChildAt(db.getCount() - 1)
+        val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
         view.findViewById<Button>(R.id.editCategoryButton).callOnClick()
 
         shadow.clickMenuItem(R.id.add_menu_button)
@@ -112,5 +113,12 @@ class MainActivityFlowTest {
         shadowDialog.categorySave.performClick()
 
         assert(db.readAll()[db.getCount() - 1][0] == "New")
+    }
+
+    @Test
+    fun firstCategoryAlwaysToBeBudgeted() {
+        val db = DatabaseHandler(activity, CategoryDB())
+
+        assert(db.readAll()[0][0] == "To Be Budgeted")
     }
 }
