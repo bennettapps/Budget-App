@@ -49,7 +49,6 @@ class CategoryAdapter(private val list: ArrayList<List<Any>>, private val contex
             val categoryPresenter = CategoryPresenter(context, itemView.parent as RecyclerView)
             val db = DatabaseHandler(context, CategoryDB())
             val dbArray = db.readAll()
-//            dbArray.reverse()
 
             when(view!!.id) {
                 deleteButton.id -> {
