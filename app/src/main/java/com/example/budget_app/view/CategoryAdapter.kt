@@ -59,7 +59,7 @@ class CategoryAdapter(private val list: ArrayList<List<Any>>, private val contex
                     categoryPresenter.editCategory(dbArray[position][2] as Int)
                 }
                 moveButton.id -> {
-                    println("moving")
+                    categoryPresenter.moveCategory(position)
                 }
             }
         }

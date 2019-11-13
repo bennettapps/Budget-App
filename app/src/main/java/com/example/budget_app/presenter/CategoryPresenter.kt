@@ -1,13 +1,12 @@
 package com.example.budget_app.presenter
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,12 +22,16 @@ import com.microsoft.appcenter.crashes.Crashes
 import com.microsoft.appcenter.distribute.Distribute
 import io.fabric.sdk.android.Fabric
 import kotlinx.android.synthetic.main.category_popup.view.*
+import android.widget.ArrayAdapter
+import com.example.budget_app.view.MainActivity
+import kotlinx.android.synthetic.main.move_popup.*
+import kotlin.reflect.typeOf
 
 class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
 
     private var db = DatabaseHandler(context, CategoryDB())
 
-    fun startUp(application: Application, toBeBudgeted: View) {
+    fun startUp(application: Application) {
         AppCenter.start( // start AppCenter
             application, "019a5c56-13b5-4917-ae15-6e2155ac1873",
             Analytics::class.java, Crashes::class.java, Distribute::class.java
@@ -44,10 +47,10 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         )
 
         if(db.getCount() == 0) {
-            db.create(listOf("To Be Budgeted", 0))
+            db.create(listOf("To Be Budgeted", 1000))
         }
 
-        toBeBudgeted.findViewById<TextView>(R.id.toBeAmount).text = "$${db.readAll()[0][1]}.00"
+        updateAdapter()
     }
 
     fun updateAdapter() {
@@ -59,6 +62,9 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
         adapter.notifyDataSetChanged()
+
+        val toBeText = (context as Activity).findViewById<TextView>(R.id.toBeAmount)
+        toBeText.text = "$${db.readAll()[0][1]}.00"
     }
 
     fun deleteCategory(id: Int) {
@@ -71,7 +77,7 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         val dialogue = AlertDialog.Builder(context).setView(popup).create()
         dialogue.show()
 
-        dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener {
+        dialogue.findViewById<Button>(R.id.moveButton)!!.setOnClickListener {
             val input = popup.categoryAddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
@@ -81,6 +87,48 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
             } else {
                 Toast.makeText(context, "Please enter a name", Toast.LENGTH_LONG).show()
             }
+        }
+    }
+
+    fun moveCategory(listId: Int) {
+        val popup = LayoutInflater.from(context).inflate(R.layout.move_popup, null)
+        val dialogue = AlertDialog.Builder(context).setView(popup).create()
+        dialogue.show()
+
+        val fromSpinner = dialogue.findViewById<Spinner>(R.id.fromSpinner)
+        val toSpinner = dialogue.findViewById<Spinner>(R.id.toSpinner)
+
+        val dbItems = db.readAll()
+        val showItems = dbItems
+        val removed = showItems.removeAt(0)
+        showItems.reverse()
+        showItems.add(0, removed)
+
+        val strings = mutableListOf<String>()
+        for(item in showItems) {
+            strings.add(item[0].toString())
+        }
+
+        val adapter: ArrayAdapter<String> = ArrayAdapter(
+            context,
+            android.R.layout.simple_spinner_item, strings
+        )
+
+        fromSpinner!!.adapter = adapter
+        fromSpinner.setSelection(0)
+        toSpinner!!.adapter = adapter
+        toSpinner.setSelection(listId + 1)
+
+        dialogue.moveButton.setOnClickListener {
+            val subIndex = fromSpinner.selectedItemPosition
+            val addIndex = toSpinner.selectedItemPosition
+            val amount = dialogue.moveAmount.text.toString().toInt()
+
+            db.update(showItems[subIndex][2] as Int, listOf(showItems[subIndex][0], showItems[subIndex][1].toString().toInt() - amount))
+            db.update(showItems[addIndex][2] as Int, listOf(showItems[addIndex][0], showItems[addIndex][1].toString().toInt() + amount))
+
+            updateAdapter()
+            dialogue.dismiss()
         }
     }
 }

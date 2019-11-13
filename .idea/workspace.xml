@@ -11,9 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa2d000e-ea1c-4db0-8f5f-eece3e788440" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/move_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="29" column="77" lean-forward="true" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+            <state relative-caret-position="170">
+              <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -52,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="467">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
               <folding>
                 <element signature="e#42#275#0" expanded="true" />
               </folding>
@@ -61,11 +66,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="128" column="8" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+            <state relative-caret-position="525">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/move_popup.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -73,23 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-              <folding>
-                <element signature="e#37#459#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="49" column="27" selection-start-line="49" selection-end-line="50" />
-              <folding>
-                <element signature="e#42#936#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -122,8 +140,9 @@
       <find>view</find>
       <find>First at the top</find>
       <find>to</find>
-      <find>to</find>
       <find>to b</find>
+      <find>CategoryPresenter</find>
+      <find>updateAdapter</find>
     </findStrings>
     <replaceStrings>
       <replace>dialogue</replace>
@@ -155,7 +174,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_account_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_home_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityTest.kt" />
@@ -172,15 +190,17 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/category_card.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/move_popup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -189,6 +209,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Source Files'; set:Project Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$SourceFilesScope">
           <expand>
@@ -224,37 +275,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Budget-App" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -266,32 +286,13 @@
             <path>
               <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="res (generated)" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="res (generated)" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -303,7 +304,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="Pixel_2_API_28" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -313,6 +314,9 @@
     <option name="MODULE_TAB" value="Default Config" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.example.budget_app.view" />
       <recent name="com.example.budget_app.View" />
@@ -588,19 +592,17 @@
       <option name="project" value="LOCAL" />
       <updated>1573513517115</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Set the top bar to read &quot;to be budgeted&quot; and show the correct amount.">
+      <created>1573514067643</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573514067643</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainActivityFlowTest - 2019.11.11 at 14h 34m 47s.xml">
-      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="MainActivityFlowTest - 2019.11.11 at 14h 37m 22s.xml">
-      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="MainActivityFlowTest - 2019.11.11 at 14h 39m 22s.xml">
-      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="MainActivityFlowTest - 2019.11.11 at 14h 40m 47s.xml">
       <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
@@ -622,6 +624,15 @@
     <history-entry file="MainActivityFlowTest - 2019.11.11 at 15h 04m 30s.xml">
       <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="MainActivityFlowTest - 2019.11.11 at 15h 12m 13s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="MainActivityFlowTest - 2019.11.11 at 15h 13m 12s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="MainActivityFlowTest - 2019.11.11 at 15h 46m 30s.xml">
+      <configuration name="MainActivityFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,7 +644,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -645,8 +656,8 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.32650602" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32650602" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32891566" />
@@ -678,12 +689,10 @@
     <MESSAGE value="Implement Edit Button." />
     <MESSAGE value="Just a bit of cleanup." />
     <MESSAGE value="Make first item in Database the &quot;To be budgeted&quot;. This is behind the scenes and won't really affect anything...yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Make first item in Database the &quot;To be budgeted&quot;. This is behind the scenes and won't really affect anything...yet." />
+    <MESSAGE value="Set the top bar to read &quot;to be budgeted&quot; and show the correct amount." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set the top bar to read &quot;to be budgeted&quot; and show the correct amount." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -806,12 +815,12 @@
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AddCategoryUITest.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_category.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/DatabaseTest.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -826,13 +835,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Databases.kt" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.1.0/9865019bbd2d95e41dede3d8ebf964aa93f97766/appcompat-1.1.0-sources.jar!/androidx/appcompat/app/AppCompatActivity.java">
@@ -866,14 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -896,47 +890,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="61" column="37" lean-forward="true" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="e#37#459#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/category_popup.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/move_popup.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="49" column="27" selection-start-line="49" selection-end-line="50" />
-          <folding>
-            <element signature="e#42#936#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="467">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding>
             <element signature="e#42#275#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="29" column="77" lean-forward="true" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+        <state relative-caret-position="525">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/MainActivityFlowTest.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/CategoryAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="128" column="8" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
         </state>
       </provider>
     </entry>

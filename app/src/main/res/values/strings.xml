@@ -6,4 +6,5 @@
     <string name="to_be_budgeted">TO BE \nBUDGETED</string>
     <string name="save_category_button">Save Category</string>
     <string name="enter_name">Enter Name...</string>
+    <string name="move_button">Move Money</string>
 </resources>

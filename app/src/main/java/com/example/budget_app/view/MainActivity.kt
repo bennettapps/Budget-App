@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
         db = DatabaseHandler(this, CategoryDB())
 
         categoryPresenter = CategoryPresenter(this, categoryRecyclerView)
-        categoryPresenter.startUp(application, findViewById(R.id.toBeAmount))
-
-        categoryPresenter.updateAdapter()
+        categoryPresenter.startUp(application)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -51,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         val dialogue = AlertDialog.Builder(this).setView(view).create()
         dialogue.show()
 
-        dialogue.findViewById<Button>(R.id.categorySave)!!.setOnClickListener {
+        dialogue.findViewById<Button>(R.id.moveButton)!!.setOnClickListener {
             val input = view.categoryAddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {

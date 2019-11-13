@@ -8,7 +8,6 @@ import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
 import com.example.budget_app.view.MainActivity
 import kotlinx.android.synthetic.main.activity_main.view.*
-import kotlinx.android.synthetic.main.category_card.view.*
 import kotlinx.android.synthetic.main.category_popup.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -18,7 +17,6 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowAlertDialog
-import java.util.ArrayList
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [Build.VERSION_CODES.O_MR1])
@@ -31,7 +29,7 @@ class MainActivityFlowTest {
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
         shadowDialog.categoryAddName.setText(name)
-        shadowDialog.categorySave.performClick()
+        shadowDialog.moveButton.performClick()
 
         return shadowDialog
     }
@@ -106,11 +104,9 @@ class MainActivityFlowTest {
         val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
         view.findViewById<Button>(R.id.editCategoryButton).callOnClick()
 
-        shadow.clickMenuItem(R.id.add_menu_button)
-
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
         shadowDialog.categoryAddName.setText("New")
-        shadowDialog.categorySave.performClick()
+        shadowDialog.moveButton.performClick()
 
         assert(db.readAll()[db.getCount() - 1][0] == "New")
     }
@@ -128,5 +124,16 @@ class MainActivityFlowTest {
         val toBeAmount = shadow.contentView.toBeAmount
 
         assert("$${db.readAll()[0][1]}.00" == toBeAmount.text)
+    }
+
+    @Test
+    fun moveButtonWorks() {
+        val db = DatabaseHandler(activity, CategoryDB())
+        val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
+        view.findViewById<Button>(R.id.moveCategoryButton).callOnClick()
+
+        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.moveButton.performClick()
+        assert(false)
     }
 }
