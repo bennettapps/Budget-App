@@ -9,6 +9,7 @@ import com.example.budget_app.presenter.DatabaseHandler
 import com.example.budget_app.view.MainActivity
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.category_popup.*
+import kotlinx.android.synthetic.main.move_popup.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.Assert.*
@@ -29,7 +30,7 @@ class MainActivityFlowTest {
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
         shadowDialog.categoryAddName.setText(name)
-        shadowDialog.moveButton.performClick()
+        shadowDialog.saveButton.performClick()
 
         return shadowDialog
     }
@@ -104,9 +105,7 @@ class MainActivityFlowTest {
         val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
         view.findViewById<Button>(R.id.editCategoryButton).callOnClick()
 
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
-        shadowDialog.categoryAddName.setText("New")
-        shadowDialog.moveButton.performClick()
+        clickThroughPopup("New")
 
         assert(db.readAll()[db.getCount() - 1][0] == "New")
     }
@@ -129,11 +128,20 @@ class MainActivityFlowTest {
     @Test
     fun moveButtonWorks() {
         val db = DatabaseHandler(activity, CategoryDB())
+
+        clickThroughPopup("Move")
+
+        val fromAmount = db.readAll()[0][1] as Int
+        val toAmount = db.readAll()[db.getCount() - 1][1] as Int
+
         val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
         view.findViewById<Button>(R.id.moveCategoryButton).callOnClick()
 
         val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.moveAmount.setText("10")
         shadowDialog.moveButton.performClick()
-        assert(false)
+
+        assert(db.readAll()[0][1] == (fromAmount - 10))
+        assert(db.readAll()[db.getCount() - 1][1] == (toAmount + 10))
     }
 }

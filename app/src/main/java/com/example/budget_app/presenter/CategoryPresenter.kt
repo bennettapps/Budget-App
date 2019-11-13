@@ -77,11 +77,11 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         val dialogue = AlertDialog.Builder(context).setView(popup).create()
         dialogue.show()
 
-        dialogue.findViewById<Button>(R.id.moveButton)!!.setOnClickListener {
+        dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
             val input = popup.categoryAddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
-                db.update(id, listOf(input, 0))
+                db.update(id, listOf(input, db.readAll()[id - 1][1]))
                 updateAdapter()
                 dialogue.dismiss()
             } else {

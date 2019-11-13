@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         val dialogue = AlertDialog.Builder(this).setView(view).create()
         dialogue.show()
 
-        dialogue.findViewById<Button>(R.id.moveButton)!!.setOnClickListener {
+        dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
             val input = view.categoryAddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
