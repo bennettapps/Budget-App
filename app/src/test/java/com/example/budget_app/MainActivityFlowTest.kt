@@ -79,7 +79,7 @@ class MainActivityFlowTest {
 
         clickThroughPopup("Test")
 
-        assert(db.readAll()[recyclerViewCount + 1][0] == "Test")
+        assert(db.read(recyclerViewCount + 1)[0] == "Test")
     }
 
     @Test
@@ -107,14 +107,14 @@ class MainActivityFlowTest {
 
         clickThroughPopup("New")
 
-        assert(db.readAll()[db.getCount() - 1][0] == "New")
+        assert(db.read(db.getCount() - 1)[0] == "New")
     }
 
     @Test
     fun firstCategoryAlwaysToBeBudgeted() {
         val db = DatabaseHandler(activity, CategoryDB())
 
-        assert(db.readAll()[0][0] == "To Be Budgeted")
+        assert(db.read(0)[0] == "To Be Budgeted")
     }
 
     @Test
@@ -122,7 +122,7 @@ class MainActivityFlowTest {
         val db = DatabaseHandler(activity, CategoryDB())
         val toBeAmount = shadow.contentView.toBeAmount
 
-        assert("$${db.readAll()[0][1]}.00" == toBeAmount.text)
+        assert("$${db.read(0)[1]}.00" == toBeAmount.text)
     }
 
     @Test
@@ -131,8 +131,8 @@ class MainActivityFlowTest {
 
         clickThroughPopup("Move")
 
-        val fromAmount = db.readAll()[0][1] as Int
-        val toAmount = db.readAll()[db.getCount() - 1][1] as Int
+        val fromAmount = db.read(0)[1] as Int
+        val toAmount = db.read(db.getCount() - 1)[1] as Int
 
         val view = shadow.contentView.categoryRecyclerView.getChildAt(shadow.contentView.categoryRecyclerView.childCount - 1)
         view.findViewById<Button>(R.id.moveCategoryButton).callOnClick()
@@ -141,7 +141,7 @@ class MainActivityFlowTest {
         shadowDialog.moveAmount.setText("10")
         shadowDialog.moveButton.performClick()
 
-        assert(db.readAll()[0][1] == (fromAmount - 10))
-        assert(db.readAll()[db.getCount() - 1][1] == (toAmount + 10))
+        assert(db.read(0)[1] == (fromAmount - 10))
+        assert(db.read(db.getCount() - 1)[1] == (toAmount + 10))
     }
 }

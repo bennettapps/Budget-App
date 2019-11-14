@@ -64,7 +64,7 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         adapter.notifyDataSetChanged()
 
         val toBeText = (context as Activity).findViewById<TextView>(R.id.toBeAmount)
-        toBeText.text = "$${db.readAll()[0][1]}.00"
+        toBeText.text = "$${db.read(0)[1]}.00"
     }
 
     fun deleteCategory(id: Int) {
@@ -81,7 +81,7 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
             val input = popup.categoryAddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
-                db.update(id, listOf(input, db.readAll()[id - 1][1]))
+                db.update(id, listOf(input, db.read(id - 1)[1]))
                 updateAdapter()
                 dialogue.dismiss()
             } else {

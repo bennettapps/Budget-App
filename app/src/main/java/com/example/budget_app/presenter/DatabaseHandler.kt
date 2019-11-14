@@ -2,6 +2,7 @@ package com.example.budget_app.presenter
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.budget_app.model.Database
@@ -51,6 +52,39 @@ class DatabaseHandler (context: Context, database: Database) :
         db.close()
     }
 
+    private fun readFromCursor(cursor: Cursor): List<Any> {
+        val list = mutableListOf<Any>()
+        for(i in itemTypes.indices) {
+            if(itemKeys[i] == "id") {
+                list.add(cursor.getInt(cursor.getColumnIndex(keyId)))
+                break
+            }
+            when (itemTypes[i]) {
+                "TEXT" -> {
+                    list.add(cursor.getString(cursor.getColumnIndex(itemKeys[i])))
+                }
+                "INT" -> {
+                    list.add(cursor.getInt(cursor.getColumnIndex(itemKeys[i])))
+                }
+            }
+        }
+
+        return list
+    }
+
+    fun read(id: Int): List<Any> {
+        val db = readableDatabase
+        val selectAll = "SELECT * FROM $tableName"
+        val cursor = db.rawQuery(selectAll, null)
+        cursor.moveToPosition(id)
+
+        val list = readFromCursor(cursor)
+
+        db.close()
+
+        return list
+    }
+
     fun readAll(): ArrayList<List<Any>> {
         val db = readableDatabase
         val list: ArrayList<List<Any>> = ArrayList()
@@ -59,22 +93,7 @@ class DatabaseHandler (context: Context, database: Database) :
 
         if(cursor.moveToFirst()) {
             do {
-                val result = mutableListOf<Any>()
-                for(i in itemTypes.indices) {
-                    if(itemKeys[i] == "id") {
-                        result.add(cursor.getInt(cursor.getColumnIndex(keyId)))
-                        break
-                    }
-                    when (itemTypes[i]) {
-                        "TEXT" -> {
-                            result.add(cursor.getString(cursor.getColumnIndex(itemKeys[i])))
-                        }
-                        "INT" -> {
-                            result.add(cursor.getInt(cursor.getColumnIndex(itemKeys[i])))
-                        }
-                    }
-                }
-                list.add(result)
+                list.add(readFromCursor(cursor))
             } while (cursor.moveToNext())
         }
 
