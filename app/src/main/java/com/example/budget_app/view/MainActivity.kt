@@ -12,6 +12,7 @@ import com.example.budget_app.R
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.CategoryPresenter
 import com.example.budget_app.presenter.DatabaseHandler
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.category_popup.view.*
 
