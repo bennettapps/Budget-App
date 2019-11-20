@@ -46,7 +46,7 @@ class CategoryAdapter(private val list: ArrayList<List<Any>>, private val contex
 
         override fun onClick(view: View?) {
             val position = adapterPosition
-            val categoryPresenter = CategoryPresenter(context, itemView.parent as RecyclerView)
+            val categoryPresenter = CategoryPresenter(context, itemView.rootView)
             val db = DatabaseHandler(context, CategoryDB())
             val dbArray = db.readAll()
             dbArray.reverse()

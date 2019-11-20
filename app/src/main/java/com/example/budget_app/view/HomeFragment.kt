@@ -1,39 +1,41 @@
 package com.example.budget_app.view
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.Menu
-import android.view.MenuItem
+import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.budget_app.R
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.CategoryPresenter
 import com.example.budget_app.presenter.DatabaseHandler
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.category_popup.view.*
 
-class MainActivity : AppCompatActivity() {
-
+class HomeFragment : Fragment() {
     private lateinit var db: DatabaseHandler
     private lateinit var categoryPresenter: CategoryPresenter
+    private lateinit var myView: View
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState) // start app
-        setContentView(R.layout.activity_main) // set content view
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        myView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        db = DatabaseHandler(this, CategoryDB())
+        db = DatabaseHandler(myView.context, CategoryDB())
 
-        categoryPresenter = CategoryPresenter(this, categoryRecyclerView)
-        categoryPresenter.startUp(application)
+        categoryPresenter = CategoryPresenter(myView.context, myView)
+        categoryPresenter.startUp(activity!!.application)
+
+        setHasOptionsMenu(true)
+
+        return myView
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.top_menu, menu)
-        return true
+    companion object {
+        fun newInstance(): HomeFragment =
+            HomeFragment()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun createPopup() {
         val view = layoutInflater.inflate(R.layout.category_popup, null)
-        val dialogue = AlertDialog.Builder(this).setView(view).create()
+        val dialogue = AlertDialog.Builder(context!!).setView(view).create()
         dialogue.show()
 
         dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 dialogue.dismiss()
                 categoryPresenter.updateAdapter()
             } else {
-                Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show()
+                Toast.makeText(context!!, "Please enter a name", Toast.LENGTH_LONG).show()
             }
         }
     }

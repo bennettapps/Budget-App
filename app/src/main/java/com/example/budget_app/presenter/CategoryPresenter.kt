@@ -1,6 +1,5 @@
 package com.example.budget_app.presenter
 
-import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.text.TextUtils
@@ -9,7 +8,6 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.Answers
 import com.crashlytics.android.answers.ContentViewEvent
@@ -23,11 +21,10 @@ import com.microsoft.appcenter.distribute.Distribute
 import io.fabric.sdk.android.Fabric
 import kotlinx.android.synthetic.main.category_popup.view.*
 import android.widget.ArrayAdapter
-import com.example.budget_app.view.MainActivity
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.move_popup.*
-import kotlin.reflect.typeOf
 
-class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
+class CategoryPresenter(val context: Context, val myView: View) {
 
     private var db = DatabaseHandler(context, CategoryDB())
 
@@ -59,11 +56,11 @@ class CategoryPresenter(val context: Context, val recyclerView: RecyclerView) {
         list.reverse()
 
         val adapter = CategoryAdapter(list, context)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = adapter
+        myView.categoryRecyclerView.layoutManager = LinearLayoutManager(context)
+        myView.categoryRecyclerView.adapter = adapter
         adapter.notifyDataSetChanged()
 
-        val toBeText = (context as Activity).findViewById<TextView>(R.id.toBeAmount)
+        val toBeText = myView.findViewById<TextView>(R.id.toBeAmount)
         toBeText.text = "$${db.read(0)[1]}.00"
     }
 

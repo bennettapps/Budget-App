@@ -6,7 +6,6 @@ import android.os.Build
 import android.widget.Button
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
-import com.example.budget_app.view.MainActivity
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.category_popup.*
 import kotlinx.android.synthetic.main.move_popup.*

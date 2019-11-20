@@ -2,7 +2,6 @@ package com.example.budget_app
 
 import android.app.Activity
 import android.os.Build
-import com.example.budget_app.view.MainActivity
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.Assert.*
