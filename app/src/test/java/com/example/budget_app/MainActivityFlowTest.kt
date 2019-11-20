@@ -6,8 +6,9 @@ import android.os.Build
 import android.widget.Button
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.DatabaseHandler
-import kotlinx.android.synthetic.main.activity_main.view.*
+import com.example.budget_app.view.NavigationActivity
 import kotlinx.android.synthetic.main.category_popup.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.move_popup.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,7 +22,7 @@ import org.robolectric.shadows.ShadowAlertDialog
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [Build.VERSION_CODES.O_MR1])
 class MainActivityFlowTest {
-    private var activity: Activity = Robolectric.setupActivity(MainActivity::class.java)
+    private var activity: Activity = Robolectric.setupActivity(NavigationActivity::class.java)
     private val shadow = shadowOf(activity)
 
     private fun clickThroughPopup(name: String): Dialog {
