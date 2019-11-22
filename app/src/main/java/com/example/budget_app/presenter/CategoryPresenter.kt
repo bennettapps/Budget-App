@@ -19,7 +19,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import com.microsoft.appcenter.distribute.Distribute
 import io.fabric.sdk.android.Fabric
-import kotlinx.android.synthetic.main.category_popup.view.*
+import kotlinx.android.synthetic.main.new_category_popup.view.*
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.move_popup.*
@@ -70,12 +70,12 @@ class CategoryPresenter(val context: Context, val myView: View) {
     }
 
     fun editCategory(id: Int) {
-        val popup = LayoutInflater.from(context).inflate(R.layout.category_popup, null)
+        val popup = LayoutInflater.from(context).inflate(R.layout.new_category_popup, null)
         val dialogue = AlertDialog.Builder(context).setView(popup).create()
         dialogue.show()
 
         dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
-            val input = popup.categoryAddName.text.toString()
+            val input = popup.AddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
                 db.update(id, listOf(input, db.read(id - 1)[1]))

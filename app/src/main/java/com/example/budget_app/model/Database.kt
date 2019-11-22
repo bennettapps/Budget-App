@@ -17,3 +17,12 @@ class CategoryDB: Database {
     override val itemKeys = listOf("category_name", "category_amount", "id")
     override val itemTypes = listOf("TEXT", "INT", "INT")
 }
+
+class AccountDB: Database {
+    override val dbName = "accounts.db"
+    override val dbVersion = 1
+    override val tableName = "accounts"
+    override val keyId = "accounts_id"
+    override val itemKeys = listOf("account_name", "account_balance", "id")
+    override val itemTypes = listOf("TEXT", "INT", "INT")
+}

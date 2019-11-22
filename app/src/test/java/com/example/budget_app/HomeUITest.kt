@@ -16,33 +16,8 @@ class MainActivityTest {
     private var activity: Activity = Robolectric.setupActivity(NavigationActivity::class.java)
 
     @Test
-    fun activityNotNull() {
-        assertNotNull(activity)
-    }
-
-    @Test
     fun recyclerViewNotNull() {
         assertNotNull(activity.findViewById(R.id.categoryRecyclerView))
-    }
-
-    @Test
-    fun addButtonNotNull() {
-        assertNotNull(activity.findViewById(R.id.add_menu_button))
-    }
-
-    @Test
-    fun homeButtonNotNull() {
-        assertNotNull(activity.findViewById(R.id.homeButton))
-    }
-
-    @Test
-    fun accountButtonNotNull() {
-        assertNotNull(activity.findViewById(R.id.accountButton))
-    }
-
-    @Test
-    fun transactionButtonNotNull() {
-        assertNotNull(activity.findViewById(R.id.transactionButton))
     }
 
     @Test

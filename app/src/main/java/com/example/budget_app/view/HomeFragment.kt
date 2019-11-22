@@ -1,7 +1,5 @@
 package com.example.budget_app.view
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -13,7 +11,7 @@ import com.example.budget_app.R
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.CategoryPresenter
 import com.example.budget_app.presenter.DatabaseHandler
-import kotlinx.android.synthetic.main.category_popup.view.*
+import kotlinx.android.synthetic.main.new_category_popup.view.*
 
 class HomeFragment : Fragment() {
     private lateinit var db: DatabaseHandler
@@ -48,12 +46,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun createPopup() {
-        val view = layoutInflater.inflate(R.layout.category_popup, null)
+        val view = layoutInflater.inflate(R.layout.new_category_popup, null)
         val dialogue = AlertDialog.Builder(context!!).setView(view).create()
         dialogue.show()
 
         dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
-            val input = view.categoryAddName.text.toString()
+            val input = view.AddName.text.toString()
 
             if (!TextUtils.isEmpty(input)) {
                 db.create(listOf(input, 0))
