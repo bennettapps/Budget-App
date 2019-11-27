@@ -44,7 +44,7 @@ class CategoryPresenter(val context: Context, val myView: View) {
         )
 
         if(db.getCount() == 0) {
-            db.create(listOf("To Be Budgeted", 1000))
+            db.create(listOf("To Be Budgeted", 0))
         }
 
         updateAdapter()

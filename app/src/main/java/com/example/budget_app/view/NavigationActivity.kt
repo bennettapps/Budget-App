@@ -21,7 +21,7 @@ class NavigationActivity : AppCompatActivity() {
         val bottomNavigation: BottomNavigationView = findViewById(R.id.nav_view)
         bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
-        val home = HomeFragment.newInstance()
+        val home = HomeFragment()
         openFragment(home)
         currentFragment = home
     }
@@ -63,5 +63,5 @@ class NavigationActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.top_menu, menu)
         return true
-    }
+    } 
 }

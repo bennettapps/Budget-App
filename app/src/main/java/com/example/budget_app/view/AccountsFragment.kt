@@ -12,21 +12,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.budget_app.R
 import com.example.budget_app.model.AccountDB
+import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.AccountsPresenter
 import com.example.budget_app.presenter.DatabaseHandler
 import kotlinx.android.synthetic.main.new_account_popup.view.*
-import kotlinx.android.synthetic.main.new_category_popup.view.*
 import kotlinx.android.synthetic.main.new_category_popup.view.AddName
 
 class AccountsFragment : Fragment() {
-    private lateinit var db: DatabaseHandler
+    private lateinit var accountDB: DatabaseHandler
+    private lateinit var categoryDB: DatabaseHandler
     private lateinit var accountsPresenter: AccountsPresenter
     private lateinit var myView: View
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.fragment_accounts, container, false)
 
-        db = DatabaseHandler(myView.context, AccountDB())
+        accountDB = DatabaseHandler(myView.context, AccountDB())
+        categoryDB = DatabaseHandler(HomeFragment.newInstance().requireView().context, CategoryDB())
 
         accountsPresenter = AccountsPresenter(myView.context, myView)
         accountsPresenter.updateAdapter()
@@ -59,7 +61,11 @@ class AccountsFragment : Fragment() {
             val balance = view.AddAmount.text.toString().toInt()
 
             if (!TextUtils.isEmpty(input)) {
-                db.create(listOf(input, balance))
+                val toBeBudgeted = categoryDB.read(0)
+
+                accountDB.create(listOf(input, balance))
+                categoryDB.update(0, listOf(toBeBudgeted[0], (toBeBudgeted[1] as Int) + balance))
+
                 dialogue.dismiss()
                 accountsPresenter.updateAdapter()
             } else {
