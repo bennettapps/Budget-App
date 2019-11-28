@@ -21,9 +21,9 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        db = DatabaseHandler(myView.context, CategoryDB())
+        db = DatabaseHandler(context!!, CategoryDB())
 
-        categoryPresenter = CategoryPresenter(myView.context, myView)
+        categoryPresenter = CategoryPresenter(context!!, myView)
         categoryPresenter.startUp(activity!!.application)
 
         setHasOptionsMenu(true)

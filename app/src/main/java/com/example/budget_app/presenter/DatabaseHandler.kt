@@ -115,20 +115,24 @@ class DatabaseHandler (context: Context, database: Database) :
                 }
             }
         }
-
-        return db.update(tableName, values, "$keyId=?", arrayOf(id.toString()))
+        val result = db.update(tableName, values, "$keyId=?", arrayOf(id.toString()))
+        db.close()
+        return result
     }
 
     fun delete(id: Int) {
         val db = writableDatabase
         db.delete(tableName, "$keyId=?", arrayOf(id.toString()))
+        db.close()
     }
 
     fun getCount(): Int {
         val db = readableDatabase
         val countQuery = "SELECT * FROM $tableName"
         val cursor = db.rawQuery(countQuery, null)
+        val count = cursor.count
 
-        return cursor.count
+        db.close()
+        return count
     }
 }

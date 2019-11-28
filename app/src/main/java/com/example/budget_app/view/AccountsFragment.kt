@@ -14,6 +14,7 @@ import com.example.budget_app.R
 import com.example.budget_app.model.AccountDB
 import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.presenter.AccountsPresenter
+import com.example.budget_app.presenter.CategoryPresenter
 import com.example.budget_app.presenter.DatabaseHandler
 import kotlinx.android.synthetic.main.new_account_popup.view.*
 import kotlinx.android.synthetic.main.new_category_popup.view.AddName
@@ -27,10 +28,10 @@ class AccountsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         myView = inflater.inflate(R.layout.fragment_accounts, container, false)
 
-        accountDB = DatabaseHandler(myView.context, AccountDB())
-        categoryDB = DatabaseHandler(HomeFragment.newInstance().requireView().context, CategoryDB())
+        accountDB = DatabaseHandler(context!!, AccountDB())
+        categoryDB = DatabaseHandler(context!!, CategoryDB())
 
-        accountsPresenter = AccountsPresenter(myView.context, myView)
+        accountsPresenter = AccountsPresenter(context!!, myView)
         accountsPresenter.updateAdapter()
 
         setHasOptionsMenu(true)
@@ -64,8 +65,7 @@ class AccountsFragment : Fragment() {
                 val toBeBudgeted = categoryDB.read(0)
 
                 accountDB.create(listOf(input, balance))
-                categoryDB.update(0, listOf(toBeBudgeted[0], (toBeBudgeted[1] as Int) + balance))
-
+                categoryDB.update(categoryDB.read(0)[2] as Int, listOf(toBeBudgeted[0], toBeBudgeted[1] as Int + balance))
                 dialogue.dismiss()
                 accountsPresenter.updateAdapter()
             } else {
