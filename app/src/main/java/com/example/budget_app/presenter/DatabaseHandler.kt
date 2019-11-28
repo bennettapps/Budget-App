@@ -45,6 +45,9 @@ class DatabaseHandler (context: Context, database: Database) :
                 is Int -> {
                     values.put(itemKeys[i], items[i] as Int)
                 }
+                is Long -> {
+                    values.put(itemKeys[i], items[i] as Long)
+                }
             }
         }
 
@@ -65,6 +68,9 @@ class DatabaseHandler (context: Context, database: Database) :
                 }
                 "INT" -> {
                     list.add(cursor.getInt(cursor.getColumnIndex(itemKeys[i])))
+                }
+                "LONG" -> {
+                    list.add(cursor.getLong(cursor.getColumnIndex(itemKeys[i])))
                 }
             }
         }
@@ -112,6 +118,9 @@ class DatabaseHandler (context: Context, database: Database) :
                 }
                 is Int -> {
                     values.put(itemKeys[i], items[i] as Int)
+                }
+                is Long -> {
+                    values.put(itemKeys[i], items[i] as Long)
                 }
             }
         }
