@@ -34,7 +34,7 @@
                 android:textStyle="bold" />
 
         <Spinner
-                android:id="@+id/fromSpinner"
+                android:id="@+id/categorySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/fromText" />
@@ -52,7 +52,7 @@
                 android:textStyle="bold" />
 
         <Spinner
-                android:id="@+id/toSpinner"
+                android:id="@+id/accountSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/toText" />

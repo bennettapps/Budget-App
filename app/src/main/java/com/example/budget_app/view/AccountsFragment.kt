@@ -59,13 +59,13 @@ class AccountsFragment : Fragment() {
 
         dialogue.findViewById<Button>(R.id.saveButton)!!.setOnClickListener {
             val input = view.AddName.text.toString()
-            val balance = view.AddAmount.text.toString().toInt()
+            val balance = view.AddAmount.text.toString().toLong()
 
             if (!TextUtils.isEmpty(input)) {
                 val toBeBudgeted = categoryDB.read(0)
 
                 accountDB.create(listOf(input, balance))
-                categoryDB.update(categoryDB.read(0)[2] as Int, listOf(toBeBudgeted[0], toBeBudgeted[1] as Int + balance))
+                categoryDB.update(categoryDB.read(0)[2] as Int, listOf(toBeBudgeted[0], toBeBudgeted[1] as Long + balance))
                 dialogue.dismiss()
                 accountsPresenter.updateAdapter()
             } else {

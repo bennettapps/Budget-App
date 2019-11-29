@@ -61,7 +61,7 @@ class CategoryPresenter(val context: Context, val myView: View) {
         adapter.notifyDataSetChanged()
 
         val toBeText = myView.findViewById<TextView>(R.id.toBeAmount)
-        toBeText.text = "$${db.read(0)[1]}.00"
+        toBeText.text = db.read(0)[1].toString()
     }
 
     fun deleteCategory(id: Int) {
@@ -119,10 +119,10 @@ class CategoryPresenter(val context: Context, val myView: View) {
         dialogue.moveButton.setOnClickListener {
             val subIndex = fromSpinner.selectedItemPosition
             val addIndex = toSpinner.selectedItemPosition
-            val amount = dialogue.moveAmount.text.toString().toInt()
+            val amount = dialogue.moveAmount.text.toString().toLong()
 
-            db.update(showItems[subIndex][2] as Int, listOf(showItems[subIndex][0], showItems[subIndex][1].toString().toInt() - amount))
-            db.update(showItems[addIndex][2] as Int, listOf(showItems[addIndex][0], showItems[addIndex][1].toString().toInt() + amount))
+            db.update(showItems[subIndex][2] as Int, listOf(showItems[subIndex][0], showItems[subIndex][1].toString().toLong() - amount))
+            db.update(showItems[addIndex][2] as Int, listOf(showItems[addIndex][0], showItems[addIndex][1].toString().toLong() + amount))
 
             updateAdapter()
             dialogue.dismiss()
