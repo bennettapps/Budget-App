@@ -11,15 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa2d000e-ea1c-4db0-8f5f-eece3e788440" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="-576">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -66,17 +61,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+            <state relative-caret-position="189">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="332">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
               <folding>
                 <element signature="e#37#1029#0" expanded="true" />
               </folding>
@@ -97,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1112">
+            <state relative-caret-position="-1236">
               <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
                 <element signature="e#32#919#0" expanded="true" />
@@ -106,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="423">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -236,11 +231,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/transaction_card.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" />
       </list>
     </option>
   </component>
@@ -767,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574982353888</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="You can now create transactions! However, they don't actually affect anything yet :P">
+      <created>1575044162477</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1575044162477</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -816,7 +818,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.22532189" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49840763" visible="true" weight="0.22532189" />
       <window_info id="Structure" order="2" sideWeight="0.50159234" side_tool="true" weight="0.25751072" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" sideWeight="0.50159234" side_tool="true" weight="0.25751072" />
@@ -825,13 +827,13 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32303372" />
-      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.32863188" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.32863188" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3282123" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3282123" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3282123" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.2045134" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.2045134" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32960895" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3282123" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.3282123" />
@@ -897,7 +899,8 @@
     <MESSAGE value="When you create an account, the balance is added to &quot;to be budgeted&quot;" />
     <MESSAGE value="Fix account tests." />
     <MESSAGE value="Build UI for transactions. Next to wire it all up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Build UI for transactions. Next to wire it all up." />
+    <MESSAGE value="You can now create transactions! However, they don't actually affect anything yet :P" />
+    <option name="LAST_COMMIT_MESSAGE" value="You can now create transactions! However, they don't actually affect anything yet :P" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_transaction_button.xml">
@@ -1178,44 +1181,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="29" column="19" selection-start-line="29" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#37#1029#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1112">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding>
-            <element signature="e#32#919#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,8 +1198,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="423">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1236">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#32#919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#37#1029#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

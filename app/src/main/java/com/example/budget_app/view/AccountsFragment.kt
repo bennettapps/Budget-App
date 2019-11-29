@@ -66,6 +66,7 @@ class AccountsFragment : Fragment() {
 
                 accountDB.create(listOf(input, balance))
                 categoryDB.update(categoryDB.read(0)[2] as Int, listOf(toBeBudgeted[0], toBeBudgeted[1] as Long + balance))
+                println(categoryDB.read(0)[2])
                 dialogue.dismiss()
                 accountsPresenter.updateAdapter()
             } else {

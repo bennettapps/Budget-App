@@ -38,12 +38,6 @@ class TransactionsFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        if(transactionsDB.getCount() > 0) {
-            for (item in transactionsDB.read(0)) {
-                println(item)
-            }
-        }
-
         return myView
     }
 
@@ -111,12 +105,12 @@ class TransactionsFragment : Fragment() {
                 val categoryIndex = categorySpinner.selectedItemPosition
                 val accountIndex = accountSpinner.selectedItemPosition
 
-                val categoryDBIndex = showCategoryItems[categoryIndex][2].toString().toInt() - 1
-                val accountDBIndex = showAccountItems[accountIndex][2].toString().toInt() - 1
+                val categoryDBIndex = showCategoryItems[categoryIndex][2].toString().toInt()
+                val accountDBIndex = showAccountItems[accountIndex][2].toString().toInt()
 
-                categoryDB.update(categoryDBIndex, listOf(categoryDB.read(categoryDBIndex)[0], categoryDB.read(categoryDBIndex)[1].toString().toLong() - amount))
-                accountDB.update(accountDBIndex, listOf(accountDB.read(accountDBIndex)[0], accountDB.read(accountDBIndex)[1].toString().toLong() - amount))
-                transactionsDB.create(listOf(amount, vendor, categoryDBIndex, accountDBIndex))
+                categoryDB.update(categoryDBIndex, listOf(categoryDB.read(categoryDBIndex - 1)[0], categoryDB.read(categoryDBIndex - 1)[1].toString().toLong() + amount))
+                accountDB.update(accountDBIndex, listOf(accountDB.read(accountDBIndex - 1)[0], accountDB.read(accountDBIndex - 1)[1].toString().toLong() + amount))
+                transactionsDB.create(listOf(amount, vendor, categoryDBIndex - 1, accountDBIndex - 1))
 
                 transactionsPresenter.updateAdapter()
                 dialogue.dismiss()
