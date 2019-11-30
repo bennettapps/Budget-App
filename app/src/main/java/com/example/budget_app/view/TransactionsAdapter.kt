@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.budget_app.R
 import com.example.budget_app.model.AccountDB
 import com.example.budget_app.model.CategoryDB
+import com.example.budget_app.model.TransactionDB
 import com.example.budget_app.presenter.AccountsPresenter
 import com.example.budget_app.presenter.DatabaseHandler
 import com.example.budget_app.presenter.TransactionsPresenter
@@ -52,16 +53,16 @@ class TransactionsAdapter(private val list: ArrayList<List<Any>>, private val co
         override fun onClick(view: View?) {
             val position = adapterPosition
             val transactionsPresenter = TransactionsPresenter(context, itemView.rootView)
-            val db = DatabaseHandler(context, AccountDB())
+            val db = DatabaseHandler(context, TransactionDB())
             val dbArray = db.readAll()
             dbArray.reverse()
 
             when(view!!.id) {
                 deleteButton.id -> {
-                    transactionsPresenter.deleteAccount(dbArray[position][2] as Int)
+                    transactionsPresenter.deleteAccount(dbArray[position][4] as Int)
                 }
                 editButton.id -> {
-                    transactionsPresenter.editAccount(dbArray[position][2] as Int)
+                    transactionsPresenter.editAccount(dbArray[position][4] as Int)
                 }
             }
         }

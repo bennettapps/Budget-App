@@ -12,9 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aa2d000e-ea1c-4db0-8f5f-eece3e788440" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,50 +43,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-576">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
-              <folding>
-                <element signature="e#37#1029#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -92,11 +54,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1236">
-              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-              <folding>
-                <element signature="e#32#919#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="135" column="32" lean-forward="true" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -104,27 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="271">
+              <caret line="64" column="73" selection-start-line="64" selection-start-column="73" selection-end-line="64" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaction_card.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="29" column="19" selection-start-line="29" selection-end-line="30" />
+            <state relative-caret-position="316">
+              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -227,15 +185,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsUITest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_transactions.xml" />
-        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/transaction_card.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt" />
       </list>
     </option>
   </component>
@@ -347,20 +305,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="presenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="budget_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="Budget-App" type="1abcf292:AndroidViewProjectNode" />
@@ -440,38 +384,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Android App.app">
-    <configuration name="AccountsFlowTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.budget_app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.AccountsFlowTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountsUITest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.budget_app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.AccountsUITest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainActivityTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
@@ -504,7 +416,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionsUITest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionsFlowTest.balanceAddsToCategory" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
@@ -513,8 +425,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.budget_app" />
-      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.TransactionsUITest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.TransactionsFlowTest" />
+      <option name="METHOD_NAME" value="balanceAddsToCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionsFlowTest.editButtonWorks" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.budget_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.budget_app" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.TransactionsFlowTest" />
+      <option name="METHOD_NAME" value="editButtonWorks" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionsFlowTest.saveAddsToDatabase" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.budget_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.budget_app" />
+      <option name="MAIN_CLASS_NAME" value="com.example.budget_app.TransactionsFlowTest" />
+      <option name="METHOD_NAME" value="saveAddsToDatabase" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -582,10 +529,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.TransactionsFlowTest.editButtonWorks" />
         <item itemvalue="Android JUnit.TransactionsFlowTest" />
-        <item itemvalue="Android JUnit.TransactionsUITest" />
-        <item itemvalue="Android JUnit.AccountsFlowTest" />
-        <item itemvalue="Android JUnit.AccountsUITest" />
+        <item itemvalue="Android JUnit.TransactionsFlowTest.balanceAddsToCategory" />
+        <item itemvalue="Android JUnit.TransactionsFlowTest.saveAddsToDatabase" />
         <item itemvalue="Android JUnit.MainActivityTest" />
       </list>
     </recent_temporary>
@@ -769,39 +716,46 @@
       <option name="project" value="LOCAL" />
       <updated>1575044162477</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Transactions now update the account and category you selected.">
+      <created>1575048002200</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1575048002200</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountsUITest - 2019.11.20 at 15h 43m 27s.xml">
-      <configuration name="AccountsUITest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AccountsUITest - 2019.11.20 at 15h 45m 40s.xml">
-      <configuration name="AccountsUITest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AccountsFlowTest - 2019.11.27 at 16h 52m 43s.xml">
-      <configuration name="AccountsFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AccountsFlowTest - 2019.11.27 at 16h 54m 47s.xml">
-      <configuration name="AccountsFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AccountsFlowTest - 2019.11.27 at 16h 56m 12s.xml">
-      <configuration name="AccountsFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="AccountsFlowTest - 2019.11.27 at 17h 04m 06s.xml">
-      <configuration name="AccountsFlowTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="TransactionsUITest - 2019.11.28 at 14h 37m 40s.xml">
-      <configuration name="TransactionsUITest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="TransactionsFlowTest - 2019.11.28 at 15h 05m 22s.xml">
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 14h 44m 52s.xml">
       <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionsFlowTest - 2019.11.28 at 15h 11m 56s.xml">
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 15h 19m 40s.xml">
       <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionsFlowTest - 2019.11.28 at 15h 43m 24s.xml">
+    <history-entry file="TransactionsFlowTest_balanceAddsToCategory - 2019.11.29 at 15h 21m 21s.xml">
+      <configuration name="TransactionsFlowTest.balanceAddsToCategory" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest_balanceAddsToCategory - 2019.11.29 at 15h 26m 00s.xml">
+      <configuration name="TransactionsFlowTest.balanceAddsToCategory" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 15h 32m 49s.xml">
       <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 15h 35m 31s.xml">
+      <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 15h 37m 37s.xml">
+      <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 15h 42m 14s.xml">
+      <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest - 2019.11.29 at 16h 01m 34s.xml">
+      <configuration name="TransactionsFlowTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="TransactionsFlowTest_editButtonWorks - 2019.11.29 at 16h 02m 53s.xml">
+      <configuration name="TransactionsFlowTest.editButtonWorks" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -814,7 +768,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -826,7 +780,7 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32303372" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32299012" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32863188" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3282123" />
       <window_info anchor="bottom" id="Debug" order="3" />
@@ -900,7 +854,8 @@
     <MESSAGE value="Fix account tests." />
     <MESSAGE value="Build UI for transactions. Next to wire it all up." />
     <MESSAGE value="You can now create transactions! However, they don't actually affect anything yet :P" />
-    <option name="LAST_COMMIT_MESSAGE" value="You can now create transactions! However, they don't actually affect anything yet :P" />
+    <MESSAGE value="Transactions now update the account and category you selected." />
+    <option name="LAST_COMMIT_MESSAGE" value="Transactions now update the account and category you selected." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-anydpi/ic_transaction_button.xml">
@@ -945,8 +900,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Databases.kt" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.1.0/9865019bbd2d95e41dede3d8ebf964aa93f97766/appcompat-1.1.0-sources.jar!/androidx/appcompat/app/AppCompatActivity.java">
@@ -965,16 +920,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/move_popup.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler 2.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
@@ -983,37 +937,24 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsActivity.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/MainActivity.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_navigation.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/HomeUITest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/HomeFlowTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="13" selection-start-line="25" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -1036,20 +977,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_accounts.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_category_popup.xml">
       <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/NavigationActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1078,14 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_account_popup.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1094,34 +1019,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/accounts_card.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AccountsFlowTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AccountsUITest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="31" selection-start-line="24" selection-end-line="25" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="48" column="13" selection-start-line="48" selection-end-line="48" selection-end-column="52" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsUITest.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1134,30 +1045,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/category_card.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_transactions.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#42#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/AccountsPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1166,74 +1067,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AccountsUITest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="29" column="19" selection-start-line="29" selection-end-line="30" />
+        <state relative-caret-position="180">
+          <caret line="24" column="31" selection-start-line="24" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaction_card.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/HomeUITest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="180">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/AccountsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="48">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/DatabaseHandler.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/AccountsFlowTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="-114">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transaction_popup.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_category_popup.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_account_popup.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/HomeFlowTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1236">
-          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        <state relative-caret-position="225">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/model/Database.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="64" column="73" selection-start-line="64" selection-start-column="73" selection-end-line="64" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/CategoryPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="114" column="35" lean-forward="true" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
           <folding>
-            <element signature="e#32#919#0" expanded="true" />
+            <element signature="e#42#1091#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/view/TransactionsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#37#1029#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/budget_app/TransactionsFlowTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="135" column="32" lean-forward="true" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/budget_app/presenter/TransactionsPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>

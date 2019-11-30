@@ -9,8 +9,13 @@ import com.example.budget_app.model.CategoryDB
 import com.example.budget_app.model.TransactionDB
 import com.example.budget_app.presenter.DatabaseHandler
 import com.example.budget_app.view.NavigationActivity
+import kotlinx.android.synthetic.main.accounts_card.*
+import kotlinx.android.synthetic.main.activity_navigation.*
 import kotlinx.android.synthetic.main.fragment_transactions.view.*
+import kotlinx.android.synthetic.main.new_account_popup.*
 import kotlinx.android.synthetic.main.new_account_popup.AddAmount
+import kotlinx.android.synthetic.main.new_category_popup.*
+import kotlinx.android.synthetic.main.new_category_popup.AddName
 import kotlinx.android.synthetic.main.new_category_popup.saveButton
 import kotlinx.android.synthetic.main.transaction_popup.*
 import org.junit.Test
@@ -29,9 +34,16 @@ class TransactionsFlowTest {
     private val shadow = shadowOf(activity)
 
     private fun clickThroughPopup(name: String): Dialog {
+        shadow.contentView.findViewById<View>(R.id.accountButton).callOnClick()
         shadow.clickMenuItem(R.id.add_menu_button)
+        var shadowDialog = ShadowAlertDialog.getLatestDialog()
+        shadowDialog.AddName.setText("My Account")
+        shadowDialog.AddAmount.setText("0")
+        shadowDialog.saveButton.performClick()
 
-        val shadowDialog = ShadowAlertDialog.getLatestDialog()
+        switchFragment()
+        shadow.clickMenuItem(R.id.add_menu_button)
+        shadowDialog = ShadowAlertDialog.getLatestDialog()
         shadowDialog.AddAmount.setText("10")
         shadowDialog.vendorName.setText(name)
         shadowDialog.saveButton.performClick()
@@ -86,14 +98,14 @@ class TransactionsFlowTest {
     }
 
     @Test
-    fun titleIsSameInDB() {
+    fun vendorIsSameInDB() {
         switchFragment()
         val recyclerViewCount = shadow.contentView.transactionsRecyclerView.childCount
         val db = DatabaseHandler(activity, TransactionDB())
 
         clickThroughPopup("Test")
 
-        assert(db.read(recyclerViewCount)[0] == "Test")
+        assert(db.read(recyclerViewCount)[1] == "Test")
     }
 
     @Test
@@ -123,7 +135,7 @@ class TransactionsFlowTest {
 
         clickThroughPopup("New")
 
-        assert(db.read(db.getCount() - 1)[0] == "New")
+        assert(db.read(db.getCount() - 1)[1] == "New")
     }
 
     @Test
@@ -134,6 +146,6 @@ class TransactionsFlowTest {
 
         clickThroughPopup("Account")
 
-        assert(categories.read(0)[1] == currentToBeAmount as Int + 10)
+        assert(categories.read(0)[1] == currentToBeAmount as Long + 10)
     }
 }
