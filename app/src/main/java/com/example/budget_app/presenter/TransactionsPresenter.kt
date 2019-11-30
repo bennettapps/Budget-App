@@ -93,8 +93,15 @@ class TransactionsPresenter(val context: Context, val myView: View) {
                 val categoryDBIndex = showCategoryItems[categoryIndex][2].toString().toInt()
                 val accountDBIndex = showAccountItems[accountIndex][2].toString().toInt()
 
-                categoryDB.update(categoryDBIndex, listOf(categoryDB.read(categoryDBIndex - 1)[0], categoryDB.read(categoryDBIndex - 1)[1].toString().toLong() - db.read(id - 1)[1].toString().toLong() + amount))
-                accountDB.update(accountDBIndex, listOf(accountDB.read(accountDBIndex - 1)[0], accountDB.read(accountDBIndex - 1)[1].toString().toLong() - db.read(id - 1)[1].toString().toLong() + amount))
+                val oldCategory = categoryDB.read(db.read(id - 1)[2] as Int)
+                val oldAccount = accountDB.read(db.read(id - 1)[3] as Int)
+                val oldTransaction = db.read(id - 1)
+
+                categoryDB.update(oldCategory[2] as Int, listOf(oldCategory[0], oldCategory[1] as Long - oldTransaction[0] as Long))
+                accountDB.update(oldAccount[2] as Int, listOf(oldAccount[0], oldAccount[1] as Long - oldTransaction[0] as Long))
+
+                categoryDB.update(categoryDBIndex, listOf(categoryDB.read(categoryDBIndex - 1)[0], categoryDB.read(categoryDBIndex - 1)[1].toString().toLong() + amount))
+                accountDB.update(accountDBIndex, listOf(accountDB.read(accountDBIndex - 1)[0], accountDB.read(accountDBIndex - 1)[1].toString().toLong() + amount))
 
                 db.update(id, listOf(amount, vendor, categoryDBIndex - 1, accountDBIndex - 1))
 
